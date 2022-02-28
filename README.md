@@ -8,15 +8,17 @@
     后端采用了node.js作为技术栈，框架选用了企业级的应用框架——egg.js  选择这个node.js 主要是因为可以解决高并发的问题，还有就是开发比较快，egg.js主要还是因为它有成熟的插件生态，而且经过了阿里蚂蚁金服相关系统的验证，稳定，高效，安全，废话不多说了，下面是本项目应用到其他软件:
 
 
- **-     mysql
--     rabitmq
--     elastictsearch
--     redis
--     egg.js
--     node.js
--     vue
--      nginx
--     uniapp** 
+
+1. mysql
+1. rabitmq
+1. elastictsearch
+1. redis
+1. egg.js
+1. node.js
+1. vue
+1. nginx
+1. uniapp 
+
 
 
 
