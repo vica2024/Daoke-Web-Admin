@@ -30,7 +30,7 @@ yarn build
 
 #### 使用说明
 
-  遇到不懂技术可以加我微信：wodweixiaohao
+  遇到不懂技术可以加我微信： **wodweixiaohao** 
 
 
 #### 参与贡献
