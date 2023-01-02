@@ -18,34 +18,17 @@
 1. 数据管理，租金，房态
 1. 系统管理，角色权限
 
- 
-
-
-
-
-## 安装教程
-前端：
-
-```
-git clone xxxxxx
-yarn install
-yarn build
-
-```
-
 ## 使用说明
 
   遇到不懂技术可以加我微信： **wodweixiaohao** 
 
 
-## 开源版使用须知
-
-1.允许用于个人学习、毕业设计、教学案例、公益事业;
-
-2.如果商用必须保留版权信息，请自觉遵守;
-
-3.禁止将本项目的代码和资源进行任何形式的出售，产生的一切任何后果责任由侵权者自负。
-
-## 版权信息
-
-本项目包含的第三方源码和二进制文件之版权信息另行标注。
+## 软件截图
+![输入图片说明](screenshotimage.png)
+![输入图片说明](screenshotimage.png)
+![输入图片说明](screenshotimage.png)
+![输入图片说明](screenshotimage.png)
+![输入图片说明](screenshotimage.png)
+![输入图片说明](screenshotimage.png)
+![输入图片说明](screenshotimage.png)
+![输入图片说明](screenshotimage.png)
