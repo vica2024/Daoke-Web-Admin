@@ -10,14 +10,17 @@
 
 - Swoole >= 4.6.x 并关闭 Short Name
 - PHP >= 8.0 并开启以下扩展：
--     mbstring
--     json
--     pdo
--     openssl
--     redis
--     pcntl
+- -  mbstring
+- -     json
+- -     pdo
+- -     openssl
+- -     redis
+- -     pcntl
 - Mysql >= 5.7
 - Redis >= 4.0
+
+
+
 
 
 ## 系统功能
