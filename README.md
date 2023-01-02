@@ -21,7 +21,7 @@
 ## 技术支持
 
 ![输入图片说明](screenshot/rrrrimage.png)
-  微信： **wodweixiaohao** 
+
 
 
 ## 软件截图
