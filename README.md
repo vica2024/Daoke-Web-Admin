@@ -18,9 +18,10 @@
 1. 数据管理，租金，房态
 1. 系统管理，角色权限
 
-## 使用说明
+## 技术支持
 
-  遇到不懂技术可以加我微信： **wodweixiaohao** 
+![输入图片说明](screenshot/rrrrimage.png)
+  微信： **wodweixiaohao** 
 
 
 ## 软件截图
