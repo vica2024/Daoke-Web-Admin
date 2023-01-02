@@ -25,3 +25,9 @@
 
 ## 软件截图
 ![输入图片说明](loginimage.png)
+![输入图片说明](screenshot/indeximage.png)
+![输入图片说明](screenshot/ordrimage.png)
+![输入图片说明](screenshot/34234image.png)
+![输入图片说明](screenshot/32423image.png)
+![输入图片说明](screenshot/43565456image.png)
+![输入图片说明](screenshot/324reterimage.png)
