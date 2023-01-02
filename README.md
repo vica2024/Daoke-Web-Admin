@@ -24,11 +24,4 @@
 
 
 ## 软件截图
-![输入图片说明](screenshotimage.png)
-![输入图片说明](screenshotimage.png)
-![输入图片说明](screenshotimage.png)
-![输入图片说明](screenshotimage.png)
-![输入图片说明](screenshotimage.png)
-![输入图片说明](screenshotimage.png)
-![输入图片说明](screenshotimage.png)
-![输入图片说明](screenshotimage.png)
+![输入图片说明](loginimage.png)
