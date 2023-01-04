@@ -7,8 +7,10 @@
 
 ## 系统设计
 
-   [租客看房业务流程图 ](https://731661902.gitee.io/aportment-miniprogran/booking_process.html)
-   [房东委托业务流程图 ](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+  
+1.  [租客看房业务流程图 ](https://731661902.gitee.io/aportment-miniprogran/booking_process.html)
+1.    [房东委托业务流程图 ](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+
 
 ## 环境要求
 
