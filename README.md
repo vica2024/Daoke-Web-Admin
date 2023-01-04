@@ -5,6 +5,10 @@
 
 如果觉着还不错的话，就请点个 ⭐star 支持一下吧，这将是对我最大的支持和鼓励！
 
+## 系统设计
+
+   [核心业务流程图 ](https://731661902.gitee.io/aportment-miniprogran/core_businese.html)
+
 ## 环境要求
 
 
@@ -18,9 +22,6 @@
     - pcntl
 - Mysql >= 5.7
 - Redis >= 4.0
-
-
-
 
 
 ## 系统功能
