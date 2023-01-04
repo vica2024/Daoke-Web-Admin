@@ -7,9 +7,17 @@
 
 ## 系统设计
 
-  
-1.  [租客看房业务流程图 ](https://731661902.gitee.io/aportment-miniprogran/booking_process.html)
-1.    [房东委托业务流程图 ](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+  ### 流程图
+1.  [租客看房业务流程 ](https://731661902.gitee.io/aportment-miniprogran/booking_process.html)
+1.  [房东委托业务流程 ](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+
+ ### 架构图
+1.  [总后台 ](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+1.  [租客端 ](https://gitee.com/731661902/aportment-miniprogran/wikis/%E7%B3%BB%E7%BB%9F%E8%AF%B4%E6%98%8E/%E7%A7%9F%E5%AE%A2%E7%AB%AF)
+1.  [房东端 ](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+1.  [经纪人端](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+1.  [门店端](https://731661902.gitee.io/aportment-miniprogran/delegation_process.html)
+
 
 
 ## 环境要求
