@@ -16,5 +16,6 @@
 
 ## 技术支持
 
+![输入图片说明](screenshot/rrrrimage.png)
 
 ## 软件截图
