@@ -47,6 +47,8 @@ yarn build
 ![输入图片说明](screenshot/rrrrimage.png)
 
 ## 软件截图 Screenshots
+<img src="https://s21.ax1x.com/2024/04/28/pkiRMfx.jpg" alt="稻客民宿" border="0" />
+<img src="https://s21.ax1x.com/2024/04/28/pkiRKt1.jpg" alt="稻客民宿" border="0" />
 
 
 
