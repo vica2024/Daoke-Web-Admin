@@ -21,23 +21,23 @@ Open-source projects thrive on community support. If you find this project helpf
 
 ## 安装使用 Install
 
-- 获取代码 pull the code
+- pull the code
 ```
 git clone https://github.com/vica2024/DaokeHomestay.git
 ```
-或 or
+or
 ```
 git clone https://github.com/vica2024/DaokeHomestay.git
 ```
-- 安装依赖 Install Dependencies
+- Install Dependencies
 ```
 cd DaokeHomestay && yarn install
 ```
-- 运行 Run your project
+- run project
 ```
 yarn dev
 ```
-- 打包 Build your project to launch
+- build the project to launch
 ```
 yarn build
 ```
