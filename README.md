@@ -19,25 +19,25 @@ Open-source projects thrive on community support. If you find this project helpf
 4.  [经纪人端 Agent]()
 5.  [门店端 Store]()
 
-## 安装使用
+## 安装使用 Install
 
-- 获取代码
+- 获取代码 pull the code
 ```
 git clone https://github.com/vica2024/DaokeHomestay.git
 ```
-或
+或 or
 ```
 git clone https://github.com/vica2024/DaokeHomestay.git
 ```
-- 安装依赖
+- 安装依赖 Install Dependencies
 ```
 cd DaokeHomestay && yarn install
 ```
-- 运行
+- 运行 Run your project
 ```
 yarn dev
 ```
-- 打包
+- 打包 Build your project to launch
 ```
 yarn build
 ```
