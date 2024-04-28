@@ -25,17 +25,21 @@ Open-source projects thrive on community support. If you find this project helpf
 ```
 git clone https://github.com/vica2024/DaokeHomestay.git
 ```
-or
-```
-git clone https://github.com/vica2024/DaokeHomestay.git
-```
 - Install Dependencies
 ```
-cd DaokeHomestay && yarn install
+cd DaokeHomestay && yarn install 
+```
+or
+```
+cd DaokeHomestay && npm install
 ```
 - run project
 ```
 yarn dev
+```
+or
+```
+nup run dev
 ```
 - build the project to launch
 ```
