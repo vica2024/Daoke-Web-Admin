@@ -10,14 +10,14 @@ Open-source projects thrive on community support. If you find this project helpf
 
 ## 流程图 Flowcharts
 1.  [租客看房业务流程 Tenant House Viewing Process]()
-2.  [Landlord Commissioning Process]()
+2.  [房东委托业务流程 Landlord Commissioning Process]()
 
 ## 架构图 Architecture Diagrams
 1.  [总后台 Admin Dashboard]()
 2.  [房东端 Landlord]()
 3.  [租客端 Tenant ]()
 4.  [经纪人端 Agent]()
-5.  [门店端 Interface]()
+5.  [门店端 Store]()
 
 ## 安装使用
 
