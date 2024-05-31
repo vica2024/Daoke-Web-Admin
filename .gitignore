@@ -13,7 +13,7 @@ bin-release/
 *.ipa
 *.apk
 
-.idear
+.idea
 .env
 *.env
 
