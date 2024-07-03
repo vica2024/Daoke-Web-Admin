@@ -1,48 +1,29 @@
-import { createApp } from 'vue'
-import ArcoVue from '@arco-design/web-vue'
-import ArcoVueIcon from '@arco-design/web-vue/es/icon'
+import { createApp } from 'vue';
+import ArcoVue from '@arco-design/web-vue';
+import ArcoVueIcon from '@arco-design/web-vue/es/icon';
+import globalComponents from '@/components';
+import router from './router';
+import store from './store';
+import i18n from './locale';
+import directive from './directive';
+import './mock';
+import App from './App.vue';
+import '@/assets/style/index.css';
+// Styles are imported via arco-plugin. See config/plugin/arcoStyleImport.ts in the directory for details
+// 样式通过 arco-plugin 插件导入。详见目录文件 config/plugin/arcoStyleImport.ts
+// https://arco.design/docs/designlab/use-theme-package
+import '@/assets/style/global.less';
+import '@/api/interceptor';
 
-import globalComponents from '@/components'
-import App from './App.vue'
-import * as Vue from 'vue';
-import router from './router'
-import store from './store'
-import i18n from '@/i18n'
-import directives from './directives'
-window.Vue = Vue;
-// 官方样式
-// import '@arco-design/web-vue/dist/arco.css'
-// custom 样式
-import '@arco-themes/vue-mine-admin-v2/index.less'
-import './style/skin.less'
-import './style/index.css'
-import './style/global.less'
+const app = createApp(App);
 
-import tool from '@/utils/tool'
-import * as common from '@/utils/common'
-import packageJson from '../package.json'
+app.use(ArcoVue, {});
+app.use(ArcoVueIcon);
 
-const app = createApp(App)
+app.use(router);
+app.use(store);
+app.use(i18n);
+app.use(globalComponents);
+app.use(directive);
 
-app.use(ArcoVue, {})
-.use(ArcoVueIcon)
-.use(router)
-.use(store)
-.use(i18n)
-.use(directives)
-.use(globalComponents)
-
-// 注册ma-icon图标
-const modules = import.meta.globEager('./assets/ma-icons/*.vue')
-for (const path in modules) {
-  const name = path.match(/([A-Za-z0-9_-]+)/g)[2]
-  const componentName = `MaIcon${name}`
-  app.component(componentName, modules[path].default)
-}
-
-app.config.globalProperties.$tool = tool
-app.config.globalProperties.$common = common
-app.config.globalProperties.$title = import.meta.env.VITE_APP_TITLE
-app.config.globalProperties.$url = import.meta.env.VITE_APP_BASE
-
-app.mount('#app')
+app.mount('#app');

@@ -1,0 +1,19 @@
+{
+  "theme": "light",
+  "colorWeak": false,
+  "navbar": true,
+  "menu": true,
+  "topMenu": false,
+  "hideMenu": false,
+  "menuCollapse": false,
+  "footer": true,
+  "themeColor": "#165DFF",
+  "menuWidth": 220,
+  "globalSettings": false,
+  "projectName": "稻客云租",
+  "multiTabs": true,
+  "device": "desktop",
+  "tabBar": true,
+  "menuFromServer": false,
+  "serverMenu": []
+}

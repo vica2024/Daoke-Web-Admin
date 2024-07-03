@@ -1,58 +1,88 @@
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
-import { useUserStore } from '@/store'
-import NProgress from 'nprogress'
-import tool from '@/utils/tool'
-import 'nprogress/nprogress.css'
+import NProgress from "nprogress"; // progress bar
+import "nprogress/nprogress.css";
+import { createRouter, createWebHistory } from "vue-router";
 
-import routes from './webRouter.js'
+import createRouteGuard from "./guard";
+import { appRoutes } from "./routes";
+import { NOT_FOUND_ROUTE, REDIRECT_MAIN } from "./routes/base";
 
-const title = import.meta.env.VITE_APP_TITLE
-const defaultRoutePath = '/'
-const whiteRoute = ['login', 'mineDoc', 'interfaceList', 'interfaceCode', 'signature']
-
+NProgress.configure({ showSpinner: false }); // NProgress Configuration
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
-
-router.beforeEach(async (to, from, next) => {
-  NProgress.start()
-  const userStore = useUserStore()
-  let toTitle = to.meta.title ? to.meta.title : to.name
-  document.title = `${toTitle} - ${title}`
-  const token = tool.local.get(import.meta.env.VITE_APP_TOKEN_PREFIX)
-  
-  // 登录状态下
-  if (token) {
-    if (to.name === 'login') {
-      next({ path: defaultRoutePath })
-      return
-    }
-
-    if (! userStore.user && userStore.user == undefined ) {
-      const data = await userStore.requestUserInfo()
-      data && next({ path: to.path, query: to.query })
-    } else {
-      next()
-    }
-  } else {
-    // 未登录的情况下允许访问的路由
-    if (! whiteRoute.includes(to.name)) {
-      next({ name: 'login', query: { redirect: to.fullPath } })
-    } else {
-      next()
-    }
-  }
-})
-
-router.afterEach((to, from) => {
-  NProgress.done()
-})
-
-router.onError(error => {
-  console.log(error)
-  NProgress.done();
+	history: createWebHistory(),
+	routes: [
+		{
+			path: "/",
+			redirect: "home",
+		},
+		{
+			path: "/login",
+			name: "login",
+			component: () => import("@/views/login/index.vue"),
+			meta: {
+				requiresAuth: false,
+			},
+		},
+		{
+			path: "/home",
+			name: "home",
+			component: () => import("@/views/home/index.vue"),
+			meta: {
+				requiresAuth: false,
+			},
+		},
+		...appRoutes,
+		REDIRECT_MAIN,
+		NOT_FOUND_ROUTE,
+	],
+	scrollBehavior() {
+		return { top: 0 };
+	},
 });
 
+createRouteGuard(router);
 
-export default router
+export default router;
+
+/**
+ * 
+ * roles
+配置能访问该页面的角色，如果不匹配，则会被禁止访问该路由页面
+string[]
+-
+requiresAuth
+是否需要登录鉴权
+boolean
+false
+icon
+菜单配置icon
+string
+-
+locale
+一级菜单名（语言包键名）
+string
+-
+hideInMenu
+是否在左侧菜单中隐藏该项
+boolean
+-
+hideChildrenInMenu
+强制在左侧菜单中显示单项
+boolean
+-
+activeMenu
+高亮设置的菜单项
+string
+-
+order
+排序路由菜单项。如果设置该值，值越高，越靠前
+number
+-
+noAffix
+如果设置为true，标签将不会添加到tab-bar中
+boolean
+-
+ignoreCache
+如果设置为true页面将不会被缓存
+boolean
+-
+ */

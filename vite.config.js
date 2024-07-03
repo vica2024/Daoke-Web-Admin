@@ -1,45 +1,79 @@
-import { defineConfig, loadEnv } from 'vite'
+import { resolve } from 'path';
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-export default ({ mode }) => {
-  const env = loadEnv(mode, process.cwd())
-  const proxyPrefix = env.VITE_APP_PROXY_PREFIX
+// import eslint from 'vite-plugin-eslint';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import { vitePluginForArco } from '@arco-plugins/vite-vue'
+import configCompressPlugin from './plugin/compress';
+import configVisualizerPlugin from './plugin/visualizer';
+// import configArcoResolverPlugin from './plugin/arcoResolver';
+// import configImageminPlugin from './plugin/imagemin';
 
-  return defineConfig({
-    base: env.VITE_APP_BASE,
-    plugins: [vue(), vueJsx()],
-    resolve: {
-      alias: {
-        '@': resolve(__dirname, 'src'),
-        '@cps': resolve(__dirname, 'src/components'),
-        'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
+// const isDevelopment = import.meta.env.MODE === 'development'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  // mode: 'development',
+  server: {
+    host: '0.0.0.0',
+    port: 6100,
+    proxy: {
+      '/devApi': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/devApi/, ''),
+      }
+    },
+    open: false,
+  },
+  plugins: [
+    vue(),
+    vueJsx(),
+    vitePluginForArco({
+      style: 'css'
+    }),
+    // isDevelopment ? eslint({
+    //   cache: false,
+    //   include: ['src/**/*.js', 'src/**/*.jsx', 'src/**/*.vue'],
+    //   exclude: ['node_modules'],
+    // }) : null,
+
+    configCompressPlugin('gzip'),
+    configVisualizerPlugin(),
+    // configArcoResolverPlugin(),
+    // configImageminPlugin(),
+],
+  resolve: {
+    alias: [
+      {
+        find: '@',
+        replacement: resolve(__dirname, './src'),
       },
-    },
-    build: {
-      chunkSizeWarningLimit: 1500,
-      // rollupOptions: {
-      //   output: {
-      //     manualChunks(id) {
-      //       if (id.includes('node_modules')) {
-      //         return id.toString().split("node_modules/")[1].split("/")[0].toString();
-      //       }
-      //     }
-      //   }
-      // }
-    },
-    server: {
-      host: '0.0.0.0',
-      port: env.VITE_APP_PORT || process.env.port,
-      proxy: {
-        [proxyPrefix]: {
-          target: env.VITE_APP_BASE_URL,
-          changeOrigin: true,
-          ws: true,
-          toProxy: true,
-          rewrite: path => path.replace(new RegExp(`^${proxyPrefix}`), ''),
+      {
+        find: 'assets',
+        replacement: resolve(__dirname, './src/assets'),
+      },
+      {
+        find: 'vue-i18n',
+        replacement: 'vue-i18n/dist/vue-i18n.cjs.js', // Resolve the i18n warning issue
+      },
+      {
+        find: 'vue',
+        replacement: 'vue/dist/vue.esm-bundler.js', // compile template
+      },
+    ],
+    extensions: ['.ts', '.js'],
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        modifyVars: {
+          hack: `true; @import (reference) "${resolve(
+            'src/assets/style/breakpoint.less'
+          )}";`,
         },
+        javascriptEnabled: true,
       },
     },
-  })
-}
+  },
+})

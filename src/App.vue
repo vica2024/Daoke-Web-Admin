@@ -1,36 +1,26 @@
-<!--
- - Dao-ke is a comprehensive and powerful property management system.
- - Please view the LICENSE file that was distributed with this source code,
- - For the full copyright and license information.
- - Thank you very much for using Dao-ke.
- -
- - @Author zhuovica@gmail.com>
- - @Link   https://github.com/vica2024/DaokeHomestay.git
--->
-<script setup>
-  import { checkVersion } from 'version-rocket'
-  import { version, admin_name } from '../package.json'
-  import cn from '@arco-design/web-vue/es/locale/lang/zh-cn'
-  import en from '@arco-design/web-vue/es/locale/lang/en-us'
-  import { ref } from 'vue'
-  import { useAppStore } from './store'
-  const appStore = useAppStore()
-  const lang = ref(appStore.language === 'zh_CN' ? cn : en)
-
-  // checkVersion({
-  //     localPackageVersion: version,
-  //     originVersionFileUrl: `${location.origin}/version.json`,
-  //     // 更多配置选项请参考 API
-  // },{
-  //     title:admin_name,
-  //     description:"有新版本更新",
-  //     buttonText:"立即更新",
-  //     // cancelButtonText:"稍后更新",
-  // })
-</script>
-
 <template>
-  <a-config-provider :locale="lang">
+  <a-config-provider :locale="locale" size="medium">
     <router-view />
+    <global-setting />
   </a-config-provider>
 </template>
+
+<script setup>
+  import { computed } from 'vue';
+  import enUS from '@arco-design/web-vue/es/locale/lang/en-us';
+  import zhCN from '@arco-design/web-vue/es/locale/lang/zh-cn';
+  import GlobalSetting from '@/components/global-setting/index.vue';
+  import useLocale from '@/hooks/locale';
+
+  const { currentLocale } = useLocale();
+  const locale = computed(() => {
+    switch (currentLocale.value) {
+      case 'zh-CN':
+        return zhCN;
+      case 'en-US':
+        return enUS;
+      default:
+        return enUS;
+    }
+  });
+</script>
