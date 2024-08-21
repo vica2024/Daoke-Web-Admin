@@ -15,7 +15,7 @@ export default {
 		{
 			path: "tenant", // The midline path complies with SEO specifications
 			name: "Tenant Management",
-			component: () => import("@/views/order/entrust.vue"),
+			component: () => import("@/views/customer/tenant.vue"),
 			meta: {
 				locale: "menu.customers.tenant",
 				requiresAuth: true,
@@ -25,7 +25,7 @@ export default {
 		{
 			path: "landlord", // The midline path complies with SEO specifications
 			name: "Landlord Management",
-			component: () => import("@/views/order/look.vue"),
+			component: () => import("@/views/customer/landlord.vue"),
 			meta: {
 				locale: "menu.customers.landlord",
 				requiresAuth: true,

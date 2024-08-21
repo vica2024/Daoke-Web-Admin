@@ -52,6 +52,7 @@ export default {
 	"menu.userList": "User List",
 	"menu.user": "User Center",
 	"menu.arcoWebsite": "Arco Design",
+	"menu.lock.management":"Smart Lock",
 	"menu.faq": "FAQ",
 	"navbar.docs": "Docs",
 	"navbar.action.locale": "Switch to English",

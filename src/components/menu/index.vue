@@ -102,9 +102,9 @@ export default {
 									{travel(element?.children)}
 								</a-sub-menu>
 							) : (
-								<a-menu-item key={element?.name} v-slots={{ icon }} onClick={() => goto(element)}>
+								!element.isHide?<a-menu-item key={element?.name} v-slots={{ icon }} onClick={() => goto(element)}>
 									{t(element?.meta?.locale || "")}
-								</a-menu-item>
+								</a-menu-item>:null
 							);
 						nodes.push(node);
 					});

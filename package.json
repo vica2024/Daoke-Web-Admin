@@ -12,7 +12,7 @@
 		"prepare": "husky install",
 		"clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
 		"clean:lib": "rimraf node_modules",
-		"test":"vitest"
+		"test": "vitest"
 	},
 	"lint-staged": {
 		"*.{js,ts,jsx,tsx}": [
@@ -45,6 +45,7 @@
 		"vue-router": "^4.3.0"
 	},
 	"devDependencies": {
+		"@amap/amap-jsapi-loader": "^1.0.1",
 		"@arco-plugins/vite-vue": "^1.4.5",
 		"@commitlint/cli": "^19.2.1",
 		"@commitlint/config-conventional": "^19.1.0",

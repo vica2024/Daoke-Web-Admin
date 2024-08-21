@@ -33,11 +33,21 @@ export default {
 			},
 		},
 		{
-			path: "check-in", // The midline path complies with SEO specifications
-			name: "Order Checkin",
-			component: () => import("@/views/order/check-in.vue"),
+			path: "check-in-sign", // The midline path complies with SEO specifications
+			name: "Order Signing",
+			component: () => import("@/views/order/check-in-sign.vue"),
 			meta: {
-				locale: "menu.order.check-in",
+				locale: "menu.order.check-in-sign",
+				requiresAuth: true,
+				roles: ["*"],
+			},
+		},
+		{
+			path: "check-in-homestay", // The midline path complies with SEO specifications
+			name: "Order Homestay",
+			component: () => import("@/views/order/check-in-homestay.vue"),
+			meta: {
+				locale: "menu.order.check-in-homestay",
 				requiresAuth: true,
 				roles: ["*"],
 			},

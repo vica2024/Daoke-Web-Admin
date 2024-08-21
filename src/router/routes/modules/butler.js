@@ -15,7 +15,7 @@ export default {
 		{
 			path: "store", // The midline path complies with SEO specifications
 			name: "Store Manage",
-			component: () => import("@/views/order/entrust.vue"),
+			component: () => import("@/views/butler/stores.vue"),
 			meta: {
 				locale: "menu.butler.store",
 				requiresAuth: true,
@@ -25,23 +25,13 @@ export default {
 		{
 			path: "agency-apply", // The midline path complies with SEO specifications
 			name: "Agency Apply",
-			component: () => import("@/views/order/look.vue"),
+			component: () => import("@/views/butler/agencys.vue"),
 			meta: {
 				locale: "menu.butler.agency-apply",
 				requiresAuth: true,
 				roles: ["*"],
 			},
-		},
-		{
-			path: "agency-manage", // The midline path complies with SEO specifications
-			name: "Agency Manage",
-			component: () => import("@/views/order/check-in.vue"),
-			meta: {
-				locale: "menu.butler.agency-manage",
-				requiresAuth: true,
-				roles: ["*"],
-			},
-		},
+		}
 	],
 };
 

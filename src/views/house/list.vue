@@ -12,31 +12,32 @@ const searchFormModel = reactive({
   status: null,
 });
 
+const isShowAddMadle = ref(false)
 
-const buttonStates=ref([{
-  label:"全部",
-  value:0
-},{
-  label:"待出租",
-  value:1
-},{
-  label:"已出租",
-  value:2
-},{
-  label:"已到期",
-  value:3
-},{
-  label:"已下架",
-  value:4
+const buttonStates = ref([{
+  label: "全部",
+  value: 0
+}, {
+  label: "待出租",
+  value: 1
+}, {
+  label: "已出租",
+  value: 2
+}, {
+  label: "已到期",
+  value: 3
+}, {
+  label: "已下架",
+  value: 4
 }])
 const houseList = ref([{
   title: "房源标题",
-  tags: ['¥ 1200.00','三室一厅','68m²'],
+  tags: ['¥ 1200.00', '三室一厅', '68m²'],
   state: 0,
   address: null
-},  {
+}, {
   title: "房源标题",
-  tags: ['¥ 1200.00','三室一厅','68m²'],
+  tags: ['¥ 1200.00', '三室一厅', '68m²'],
   state: 0,
   address: null
 }])
@@ -65,11 +66,17 @@ const resetFn = () => {
   searchFormModel.status = null;
 
 };
+
+const handleOk = () => {
+
+
+}
+
 </script>
 
 <template>
   <div>
-    <div class="p-5 bg-white mb-5">
+    <div class="p-5 bg-white mb-3">
       <a-row>
         <a-col :flex="1">
           <a-form :model="searchFormModel" :label-col-props="{ span: 6 }" :wrapper-col-props="{ span: 18 }"
@@ -132,18 +139,31 @@ const resetFn = () => {
       </a-row>
     </div>
     <div class="w-full mb-3 flex justify-between">
-      <a-button type="primary">采集房源</a-button>
+      <div class="w-3/1">
+        <router-link to="create">
+          <a-button type="outline" class="mr-3">添加房源</a-button>
+        </router-link>
+        <a-button type="outline">采集房源</a-button>
+      </div>
       <a-radio-group type="button" class="bg-white">
         <a-radio v-for="item in buttonStates" :value="item.value">{{ item.label }}</a-radio>
       </a-radio-group>
     </div>
     <div class="w-full">
-      <a-grid :cols="{ xs: 1, sm: 2, md: 3, lg: 4, xl: 5, xxl: 6 }" :colGap="12" :rowGap="16" class="grid-demo-grid">
+      <a-grid :cols="{ xs: 1, sm: 2, md: 3, lg: 4, xl: 4, xxl: 4 }" :colGap="12" :rowGap="16" class="grid-demo-grid">
         <a-grid-item class="bg-white p-5" v-for="item in houseList">
           <HouseItems :house="item"/>
         </a-grid-item>
       </a-grid>
     </div>
+    <a-modal v-model:visible="isShowAddMadle" @ok="handleOk" @cancel="isShowAddMadle=false" fullscreen>
+      <template #title>
+        添加房源
+      </template>
+      <div>
+
+      </div>
+    </a-modal>
   </div>
 </template>
 

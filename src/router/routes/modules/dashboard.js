@@ -12,27 +12,27 @@ const DASHBOARD = {
     order: 0,
   },
   children: [
-    {
-      path: 'workplace',
-      name: 'Workplace',
-      component: () => import('@/views/dashboard/workplace/index.vue'),
-      meta: {
-        locale: 'menu.dashboard.workplace',
-        requiresAuth: true,
-        roles: ['*'],
-      },
-    },
-
-    {
-      path: 'monitor',
-      name: 'Monitor',
-      component: () => import('@/views/dashboard/monitor/index.vue'),
-      meta: {
-        locale: 'menu.dashboard.monitor',
-        requiresAuth: true,
-        roles: ['admin'],
-      },
-    },
+    // {
+    //   path: 'workplace',
+    //   name: 'Workplace',
+    //   component: () => import('@/views/dashboard/workplace/index.vue'),
+    //   meta: {
+    //     locale: 'menu.dashboard.workplace',
+    //     requiresAuth: true,
+    //     roles: ['*'],
+    //   },
+    // },
+    //
+    // {
+    //   path: 'monitor',
+    //   name: 'Monitor',
+    //   component: () => import('@/views/dashboard/monitor/index.vue'),
+    //   meta: {
+    //     locale: 'menu.dashboard.monitor',
+    //     requiresAuth: true,
+    //     roles: ['admin'],
+    //   },
+    // },
     {
       path: 'operator',
       name: 'Operator',
