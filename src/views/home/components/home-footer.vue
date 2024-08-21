@@ -50,7 +50,7 @@
           </div>
           <button
               class="inline-flex justify-center rounded-lg py-2 px-3 text-sm font-semibold outline-2 outline-offset-2 transition-colors relative overflow-hidden bg-cyan-500 text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-cyan-600 active:text-white/80 before:transition-colors ml-4 flex-none"
-              type="submit" color="cyan" variant="solid"><span
+              type="submit"><span
               class="hidden lg:inline">Join our newsletter</span><span class="lg:hidden">Join newsletter</span>
           </button>
         </form>

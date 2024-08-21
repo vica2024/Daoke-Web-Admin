@@ -14,6 +14,7 @@ export interface AppRouteRecordRaw {
   component: Component | string;
   children?: AppRouteRecordRaw[];
   alias?: string | string[];
+  isHide:Boolean;
   props?: Record<string, any>;
   beforeEnter?: NavigationGuard | NavigationGuard[];
   fullPath?: string;

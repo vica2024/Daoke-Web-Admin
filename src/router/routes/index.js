@@ -14,7 +14,7 @@ function formatModules(_modules, result) {
       : [defaultModule];
     result.push(...moduleList);
   });
-  console.log();
+  console.log(result);
   return result;
 }
 

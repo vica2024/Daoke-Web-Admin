@@ -15,7 +15,7 @@ export function isString(obj) {
 export function isNumber(obj) {
   return opt.call(obj) === '[object Number]' && obj === obj; // eslint-disable-line
 }
-
+//testß
 export function isRegExp(obj) {
   return opt.call(obj) === '[object RegExp]';
 }

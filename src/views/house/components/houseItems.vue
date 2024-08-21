@@ -18,7 +18,8 @@ const visible = ref(false);
 <template>
   <div>
     <a-image
-        src='https://p1-arco.byteimg.com/tos-cn-i-uwbnlip3yd/a8c8cdb109cb051163646151a4a5083b.png~tplv-uwbnlip3yd-webp.webp'
+        show-loader
+        src='https://pic.tujia.com/upload/landlordunit/day_240419/thumb/202404191714156824_700_467.jpg'
         :preview-visible="visible"
         @preview-visible-change="() => { visible = false }"
     >

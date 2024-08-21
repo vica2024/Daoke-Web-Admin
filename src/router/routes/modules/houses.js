@@ -42,6 +42,16 @@ export default {
 				roles: ["*"],
 			},
 		},
+		{
+			path: "create", // The midline path complies with SEO specifications
+			name: "Create House",
+			isHide:true,
+			component: () => import("@/views/house/create.vue"),
+			meta: {
+				requiresAuth: true,
+				roles: ["*"],
+			},
+		},
 	],
 };
 

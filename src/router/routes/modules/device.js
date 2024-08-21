@@ -15,9 +15,9 @@ export default {
 		{
 			path: "index", // The midline path complies with SEO specifications
 			name: "Device Management",
-			component: () => import("@/views/order/entrust.vue"),
+			component: () => import("@/views/device/lock.vue"),
 			meta: {
-				locale: "menu.device.management",
+				locale: "menu.lock.management",
 				requiresAuth: true,
 				roles: ["*"],
 			},

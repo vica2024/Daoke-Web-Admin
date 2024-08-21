@@ -15,7 +15,7 @@ export default {
 		{
 			path: "withdraw-money-apply", // The midline path complies with SEO specifications
 			name: "Withdraw Money Apply",
-			component: () => import("@/views/order/entrust.vue"),
+			component: () => import("@/views/finance/index.vue"),
 			meta: {
 				locale: "menu.finance.apply",
 				requiresAuth: true,
@@ -25,7 +25,7 @@ export default {
 		{
 			path: "finance-details", // The midline path complies with SEO specifications
 			name: "Finance Management",
-			component: () => import("@/views/order/entrust.vue"),
+			component: () => import("@/views/finance/withdrawMoney.vue"),
 			meta: {
 				locale: "menu.finance.details",
 				requiresAuth: true,

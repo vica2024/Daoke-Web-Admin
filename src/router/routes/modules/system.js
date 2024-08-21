@@ -35,7 +35,7 @@ export default {
 		{
 			path: "wechat-config", // The midline path complies with SEO specifications
 			name: "Wechat Configure",
-			component: () => import("@/views/system/permission.vue"),
+			component: () => import("@/views/system/wechatSeting.vue"),
 			meta: {
 				locale: "menu.system.wechat-config",
 				requiresAuth: true,
@@ -43,11 +43,11 @@ export default {
 			},
 		},
 		{
-			path: "alipay-config", // The midline path complies with SEO specifications
-			name: "Alipay Configure",
-			component: () => import("@/views/system/permission.vue"),
+			path: "payment-config", // The midline path complies with SEO specifications
+			name: "Payment Configure",
+			component: () => import("@/views/system/payment.vue"),
 			meta: {
-				locale: "menu.system.alipay-config",
+				locale: "menu.system.payment-config",
 				requiresAuth: true,
 				roles: ["*"],
 			},

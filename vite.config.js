@@ -16,7 +16,7 @@ export default defineConfig({
   // mode: 'development',
   server: {
     host: '0.0.0.0',
-    port: 6100,
+    port: 6200,
     proxy: {
       '/devApi': {
         target: 'http://localhost:3000',
